@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wildlife Conservation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <audio id="music" src="./assets/jungle.mp3"></audio>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo">Wildlife&nbsp;Conservation</td>
+                <td id="navigation">
+                    <a href="#slider">Slider</a>
+                    <a href="#work">Images</a>
+                    <a href="#bio">Articles</a>
+                    <a href="#contact">Contact</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
+                <h1 style="text-align: center;">WELCOME TO WILDLIFE CONSERVATION</h1>
+                <!-- <button class="btn_one"></button><br> -->
+                <table>
+                    <img src="./assets/snake_moving.gif" alt="">
+                    <!-- <tr>
+                        <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"><i class="fab fa-twitter"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"><i class="fab fa-instagram"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"><i class="fab fa-dribbble"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:3.0s;"><a class="social"><i class="fab fa-medium"></i></a></td>
+                    </tr> -->
+                </table>
+            </td>
+            <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+        </tr>
+    </table>
+
+    <div id="slider">
+        <p>&nbsp;&nbsp;&nbsp;<h1 class="heading"> Image&nbsp;Slider</h1></p>
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="./assets/animals.gif" alt="snake not loading" style="width:100%">
+              <div class="text"></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./assets/lion.gif" style="width:100%">
+              <div class="text"></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./assets/snake.gif" style="width:100%">
+              <div class="text"></div>
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+            </div>
+
+    <div id="work">
+        <h1>Images</h1>
+        <div id="photos">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1462953491269-9aff00919695?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHdpbGRsaWZlJTIwY29uc2VydmF0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80">
+            <img onclick="magnify($(this).attr('src'))" alt="err_no_internet" src="https://images.unsplash.com/photo-1559736139-6531cc82432e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHdpbGQlMjBhbmltYWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHdpbGRsaWZlJTIwY29uc2VydmF0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1444464666168-49d633b86797?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fHdpbGRsaWZlJTIwY29uc2VydmF0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=650&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1563649701859-1435b9a0e9e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fHdpbGRsaWZlJTIwY29uc2VydmF0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1470854989922-5be2f7456d78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njl8fHdpbGRsaWZlJTIwY29uc2VydmF0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1517825738774-7de9363ef735?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHdpbGQlMjBhbmltYWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1527118732049-c88155f2107c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHdpbGQlMjBhbmltYWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80">
+        </div>
+    </div>
+
+    <div id="bio">
+        <h1>Articles</h1>
+        <p>
+            <ul>
+                <li>
+                    <a class="" href="https://theconversation.com/scientist-at-work-endangered-ocelots-and-their-genetic-diversity-may-benefit-from-artificial-insemination-166397" target="_blank" rel="noreferrer noopener">Endangered Ocelots!</a>
+                </li>
+                <li>
+                    <a class="" href="https://www.nationalgeographic.org/unit/extinction-stinks/?utm_source=BibblioRCM_Row" target="_blank" rel="noreferrer noopener">Extinctions Stinks</a>
+                </li>
+                <li>
+                    <a href="https://theconversation.com/when-endangered-species-recover-humans-may-need-to-make-room-for-them-and-its-not-always-easy-172570" target="_blank" rel="noreferred noepener">Recovering Endangered Species</a>
+                </li>
+                <li>
+                    <a href="https://www.nationalgeographic.org/topics/resource-library-extinction/?q=&page=1&per_page=25" target="_blank" rel="noreferred noepener">Extinction!</a>
+                </li>
+                <li>
+                    <a href="https://www.nationalgeographic.org/media/animal-conservation/?utm_source=BibblioRCM_Row" target="_blank" rel="noreferred noepener">Animal Conservation Map</a>
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+    
+
+    <div id="contact">
+        <h1>Contact</h1>
+            <table>
+                <tr>
+                    <td>
+                        <div id="inner_div">
+                            <table id="inner_table">
+                                <tr>
+                                    <td><i class="fas fa-phone"></i> &nbsp; +91 7982896265</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-at"></i> &nbsp; <a href="mailto:hardikmirgssv@gmail.com">hardikmirgssv@gmail.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-map-marker-alt"></i>
+                                    <div id="address">
+                                        Class 9th C,<br>
+                                        Somerville School, Vasundhara Enclave,<br>
+                                        Delhi
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://www.facebook.com/hardiks.mirg/" target="_blank" rel="noreferrer noopener" class="social"><i class="fab fa-facebook"></i></a>
+                                        <a href="https://twitter.com/hardik_mirg" target="_blank" rel="noreferrer  noopener" class="social"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://hardikmirg.netlify.app" target="_blank" rel="noreferrer  noopener" class="social"><i class="fab fa-dribbble"></i></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required><br>
+                            <textarea placeholder="Your Message" required rows="5"></textarea><br>
+                            <button class="btn_one">Send</button>
+                        </form> 
+                    </td>
+                </tr>
+            </table>
+    </div>
+    <div id="footer">
+        Made By <br><a href="https://github.com/hardikmirg" target="_blank" rel="noreferrer noopener">Hardik Mirg</a>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
